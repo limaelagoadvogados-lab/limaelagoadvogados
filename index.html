@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lima e Lago Advocacia</title>
+    <meta name="description" content="Lima e Lago - Escritório de advocacia" />
+    <meta property="og:title" content="Lima e Lago Advocacia" />
+    <meta property="og:description" content="Onde a lei encontra o cuidado." />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+  </head>
+  <body>
+    <svg aria-hidden="true" class="icon-sprite" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="icon-phone" viewBox="0 0 24 24">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.77.59 2.61a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.47-1.16a2 2 0 0 1 2.11-.45c.84.27 1.71.47 2.61.59A2 2 0 0 1 22 16.92Z"/>
+      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24">
+        <path d="m22 7-8.97 5.7a2 2 0 0 1-2.06 0L2 7"/>
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
+      </symbol>
+      <symbol id="icon-map" viewBox="0 0 24 24">
+        <path d="M20 10c0 4.99-5.52 10.54-7.4 12.25a1 1 0 0 1-1.2 0C9.52 20.54 4 14.99 4 10a8 8 0 0 1 16 0Z"/>
+        <circle cx="12" cy="10" r="3"/>
+      </symbol>
+      <symbol id="icon-menu" viewBox="0 0 24 24">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </symbol>
+      <symbol id="icon-x" viewBox="0 0 24 24">
+        <path d="M18 6 6 18M6 6l12 12"/>
+      </symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 5l7 7-7 7"/>
+      </symbol>
+      <symbol id="icon-scale" viewBox="0 0 24 24">
+        <path d="m16 16 3-8 3 8c-.87.65-1.87 1-3 1s-2.13-.35-3-1ZM2 16l3-8 3 8c-.87.65-1.87 1-3 1s-2.13-.35-3-1ZM7 21h10M12 3v18M3 7h18"/>
+      </symbol>
+      <symbol id="icon-users" viewBox="0 0 24 24">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M16 3.13a4 4 0 0 1 0 7.75M22 21v-2a4 4 0 0 0-3-3.87"/>
+        <circle cx="9" cy="7" r="4"/>
+      </symbol>
+      <symbol id="icon-shield" viewBox="0 0 24 24">
+        <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.68 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1v7Z"/>
+        <path d="m9 12 2 2 4-4"/>
+      </symbol>
+      <symbol id="icon-quote" viewBox="0 0 24 24">
+        <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0 0 2 4 4 0 0 0 4-4v-1a3 3 0 0 0-3-3V5a2 2 0 0 0-2-2ZM7 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0 0 2 4 4 0 0 0 4-4v-1a3 3 0 0 0-3-3V5a2 2 0 0 0-2-2Z"/>
+      </symbol>
+      <symbol id="icon-star" viewBox="0 0 24 24">
+        <path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/>
+      </symbol>
+      <symbol id="icon-sun" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+      </symbol>
+      <symbol id="icon-moon" viewBox="0 0 24 24">
+        <path d="M20.99 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 20.99 12.79Z"/>
+      </symbol>
+      <symbol id="icon-chevron-left" viewBox="0 0 24 24">
+        <path d="m15 18-6-6 6-6"/>
+      </symbol>
+      <symbol id="icon-chevron-right" viewBox="0 0 24 24">
+        <path d="m9 18 6-6-6-6"/>
+      </symbol>
+      <symbol id="icon-document-pen" viewBox="0 0 128 128">
+        <rect x="24"y="16" width="64" height="88" rx="8" fill="none" stroke="currentColor" stroke-width="4"/>
+        <path d="M72 16V36H88" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="36" y1="44"x2="72"y2="44" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+
+  <line
+    x1="36"
+    y1="56"
+    x2="68"
+    y2="56"
+    stroke="currentColor"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+
+  <line
+    x1="36"
+    y1="68"
+    x2="74"
+    y2="68"
+    stroke="currentColor"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+
+  <line
+    x1="36"
+    y1="80"
+    x2="62"
+    y2="80"
+    stroke="currentColor"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+
+  <!-- Pen outline -->
+  <g transform="rotate(18 92 88)">
+    <rect
+      x="84"
+      y="46"
+      width="12"
+      height="44"
+      rx="4"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="4"
+    />
+
+    <rect
+      x="84"
+      y="42"
+      width="12"
+      height="10"
+      rx="3"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="4"
+    />
+
+    <path
+      d="M84 90H96L90 104L84 90Z"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="4"
+      stroke-linejoin="round"
+    />
+  </g>
+
+</symbol>
+    </svg>
+
+    <div id="top" class="site-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a href="#top" class="logo-link" aria-label="Lima e Lago Advogados">
+            <img src="img/logo-lima-lago.png" alt="Lima e Lago Advogados" />
+          </a>
+          <nav class="desktop-nav" aria-label="Navegação principal">
+            <a href="#quem-somos">
+              <span>02</span>Quem Somos
+            </a>
+            <a href="#areas">
+              <span>03</span>Áreas de Atuação
+            </a>
+            <a href="#avaliacoes">
+              <span>04</span>Avaliações
+            </a>
+            <a href="#contato">
+              <span>05</span>Fale Conosco
+            </a>
+          </nav>
+          <div class="header-actions">
+            <button class="icon-button" id="theme-toggle" type="button" aria-label="Ativar modo claro">
+              <svg>
+                <use href="#icon-sun"></use>
+              </svg>
+            </button>
+            <button class="menu-button" id="menu-toggle" type="button" aria-label="Abrir menu">
+              <svg>
+                <use href="#icon-menu"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <nav class="mobile-nav" id="mobile-nav" aria-label="Navegação móvel">
+          <a href="#quem-somos">
+            <span>02</span>Quem Somos
+          </a>
+          <a href="#areas">
+            <span>03</span>Áreas de Atuação
+          </a>
+          <a href="#avaliacoes">
+            <span>04</span>Avaliações
+          </a>
+          <a href="#contato">
+            <span>05</span>Fale Conosco
+          </a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero section-band" aria-label="Página inicial">
+          <div class="hero-grid">
+            <div class="hero-number" aria-hidden="true">01</div>
+            <div class="hero-media">
+              <div class="hero-image-wrap">
+                <img src="img/hero-justice.jpg" alt="Balança da justiça em bronze" />
+              </div>
+              <div class="scale-badge">
+                <svg>
+                  <use href="#icon-scale"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="hero-content">
+              <div class="hero-copy">
+                <p class="kicker reveal">Lima e Lago</p>
+                <h1 class="reveal">Onde a lei <br/><span>encontra</span> <br/>o cuidado</h1>
+                <p class="hero-text reveal">Especialistas em Direito da Família, do Consumidor e Contratos Civis e Empresariais, entregando soluções jurídicas com a sofisticação e a proximidade que sua causa exige.</p>
+                <div class="hero-links reveal">
+                  <a class="primary-link" href="https://whatsa.me/5531971055301/?t=Ol%C3%A1,%20tenho%20uma%20d%C3%BAvida%20e%20gostaria%20de%20aux%C3%ADlio.%20">Fale Conosco 
+                    <svg>
+                      <use href="#icon-arrow"></use>
+                    </svg></a>
+                  <span class="line"></span>
+                  <a class="text-link" href="#areas">Nossas Áreas</a>
+                </div>
+              </div>
+            </div>
+            <p class="vertical-caption">Excelência Jurídica · <span data-year></span></p>
+          </div>
+        </section>
+
+        <section id="quem-somos" class="section-band bordered">
+          <div class="container about-grid">
+            <div class="section-copy reveal">
+              <div class="section-label">
+                <span class="section-num">02</span>
+                <p class="eyebrow"><span></span>Sobre o escritório</p>
+              </div>
+              <h2>Quem <br /><span>Somos</span></h2>
+              <div class="body-copy">
+                <p>O <strong>Lima e Lago Advocacia</strong> nasceu da convicção de que o Direito é, antes de tudo, uma forma de cuidado. Atuamos com seriedade técnica e proximidade humana.</p>
+                <p>Nossa missão é traduzir a complexidade da lei em segurança e tranquilidade — com transparência, presença e resultados.</p>
+                <p>Combinamos a tradição da advocacia clássica com uma abordagem moderna, ágil e estratégica, para defender o que mais importa para você.</p>
+              </div>
+            </div>
+            <div class="lawyers-grid">
+              <article class="lawyer-card offset reveal">
+                <div class="lawyer-card-media">
+                  <img src="img/lawyer-lago.jpg" alt="Dr. Rafael Lago" loading="lazy" />
+                </div>
+                <div>
+                  <p>OAB/MG 226.024</p>
+                  <h3>Marco Antônio Lima do Lago</h3>
+                </div>
+              </article>
+              <article class="lawyer-card reveal" >
+                <div class="lawyer-card-media">
+                  <img src="img/lawyer-lima.jpg" alt="Dra. Mariana Lima" loading="lazy" />
+                </div>
+                <div>
+                  <p>OAB/MG 233.253</p>
+                  <h3>Esther de Melo Lago</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="areas" class="section-band bordered">
+          <div class="container">
+            <div class="split-heading">
+              <div class="reveal">
+                <div class="section-label">
+                  <span class="section-num">03</span>
+                  <p class="eyebrow"><span></span>Especialidades</p>
+                </div>
+                <h2>Áreas de <span>Atuação</span></h2>
+              </div>
+              <p class="reveal">Atuação focada e profunda nas áreas em que podemos entregar o melhor resultado para o seu caso.</p>
+            </div>
+            <div class="practice-grid">
+              <article class="practice-card reveal">
+                <div class="card-top">
+                  <svg>
+                    <use href="#icon-users"></use>
+                  </svg>
+                  <span>i</span>
+                </div>
+                <h3>Direito da Família</h3>
+                <ul>
+                  <li>Divórcio e separação(judicial ou extrajudicial)</li>
+                  <li>Pensão alimentícia (fixação, revisão, exoneração, execução de alimentos)</li>
+                  <li>Guardas e visitas (guarda compartilhada, unilateral, regulamentação de convivência)</li>
+                  <li>Reconhecimento e dissolução de união estável</li>
+                  <li>Adoção</li>
+                  <li>Investigação de paternidade e reconhecimento de filiação</li>
+                  <li>Regime de bens e partilha de petrimônio</li>
+                  <li>Inderdição e curatela</li>
+                  <li>Planejamento familiar e sucessório</li>
+                </ul>
+                <a href="#contato">Saiba mais <svg><use href="#icon-arrow"></use></svg></a>
+              </article>
+              <article class="practice-card reveal">
+                <div class="card-top">
+                  <svg>
+                    <use href="#icon-document-pen"></use>
+                  </svg>
+                  <span>ii</span>
+                </div>
+                <h3>Contratos Civis e Empresariais</h3>
+                <ul>
+                  <li>DElaboração e revisão de contratos</li>
+                  <li>Contratos empresariais e societários</li>
+                  <li>Contratos imobiliários</li>
+                  <li>Negociação e gestão contratual</li>
+                  <li>Rescisão e litígios contratuais</li>
+                  <li>Consultoria em responsabilidade civil</li>
+                </ul>
+                <a href="#contato">Saiba mais <svg><use href="#icon-arrow"></use></svg></a>
+              </article>
+              <article class="practice-card practice-card--full reveal">
+                <div class="card-top">
+                  <svg>
+                    <use href="#icon-shield"></use>
+                  </svg>
+                  <span>iii</span>
+                </div>
+                <h3>Direito do Consumidor</h3>
+                <ul>
+                  <li>Ações contra empresas por defeito de produto ou serviço</li>
+                  <li>Cobranças indevidas (ex: valores não contratados, tarifas abusivas)</li>
+                  <li>Atrasos ou cancelamentos (ex: passagens aéreas, entregas de produtos)</li>
+                  <li>Inscrição indevida em cadastros de inadimplentes (SPC/Serasa)</li>
+                  <li>Direitos do consumidor em compras online (ex: arrependimento, trocas, devoluções)</li>
+                  <li>Problemas com instituições financeiras (cartões, empréstimos consiguinados não autorizados)</li>
+                  <li>Ações coletivas de consumo (ex: recalls, vícios em produtos vendidos e massa)</li>
+                  <li>Intermediação com órgãos de defesa do consumidor (ex: Procon, Senacon)</li>
+                </ul>
+                <a href="#contato">Saiba mais <svg><use href="#icon-arrow"></use></svg></a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="avaliacoes" class="section-band bordered">
+          <div class="container">
+            <div class="split-heading">
+              <div class="reveal">
+                <div class="section-label">
+                  <span class="section-num">04</span>
+                  <p class="eyebrow">
+                    <span></span>O que dizem nossos clientes</p>
+                  </div>
+                  <h2><span>Avaliações</span></h2>
+                </div>
+              <p class="reveal">Confiança construída caso a caso. Histórias reais de quem confiou sua causa ao Lima e Lago.</p>
+            </div>
+            <div class="carousel reveal" aria-roledescription="carrossel">
+              <div class="carousel-viewport">
+                <div class="carousel-track" id="testimonial-track"></div>
+              </div>
+              <div class="carousel-controls">
+                <button class="carousel-button" id="prev-testimonial" type="button" aria-label="Avaliação anterior">
+                  <svg>
+                    <use href="#icon-chevron-left"></use>
+                  </svg>
+                </button><button class="carousel-button" id="next-testimonial" type="button" aria-label="Próxima avaliação">
+                  <svg>
+                    <use href="#icon-chevron-right"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contato" class="section-band bordered">
+          <div class="container">
+            <div class="section-copy reveal contact-heading">
+              <div class="section-label">
+                <span class="section-num">05</span>
+                <p class="eyebrow">
+                  <span></span>Estamos à disposição</p>
+                </div>
+                <h2>Fale <span>Conosco.</span>
+                </h2>
+              </div>
+            <div class="contact-grid">
+              <div class="contact-panel reveal">
+                <div class="contact-list">
+                  <div class="contact-item">
+                    <svg>
+                      <use href="#icon-phone"></use>
+                    </svg>
+                    <div>
+                      <p>Telefone / WhatsApp</p><strong>+55 (31) 97105-5301</strong>
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <svg>
+                      <use href="#icon-mail"></use>
+                    </svg>
+                    <div>
+                      <p>E-mail</p><strong>limaelagoadvogados@gmail.com</strong>
+                    </div>
+                  </div>
+                  <div class="contact-item">
+                    <svg>
+                      <use href="#icon-map"></use>
+                    </svg>
+                    <div>
+                      <p>Endereço</p><strong>Rua Contagem, 736, Sala 5, Santa Inês, Belo Horizonte - MG</strong>
+                    </div>
+                  </div>
+                </div>
+                <a class="primary-link" href="https://whatsa.me/5531971055301/?t=Ol%C3%A1,%20tenho%20uma%20d%C3%BAvida%20e%20gostaria%20de%20aux%C3%ADlio.%20" target="_blank" rel="noreferrer">Entrar em contato agora <svg><use href="#icon-arrow"></use></svg></a>
+              </div>
+              <div class="map-panel reveal">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.8017593076625!2d-43.9062705!3d-19.8905911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69be9f8bc0fdf%3A0x27bb9a83f541c89d!2sLima%20e%20Lago%20Advogados!5e0!3m2!1spt-BR!2sbr!4v1779650954502!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer bordered">
+        <div class="container footer-grid">
+          <div>
+            <a href="#top" class="logo-link" aria-label="Lima e Lago Advogados"><img src="img/logo-lima-lago.png" alt="Lima e Lago Advogados" />
+            </a>
+            <p>Onde a lei encontra o cuidado.</p>
+          </div>
+          <div class="footer-lawyers">
+            <div>
+              <strong>Marco Antônio Lima de Lago</strong><span>OAB/MG 226.024</span>
+            </div>
+            <div>
+              <strong>Esther de Melo Lago</strong><span>OAB/MG 233.253</span>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          © <span data-year></span> Lima e Lago Advocacia · Todos os direitos reservados
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
