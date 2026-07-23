@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 @font-face {
-  src: url('fonts/AguaritaDemoEditada.woff2') format('truetype');
+  src: url('assets/fonts/AguaritaDemoEditada.woff2') format('truetype');
   font-family: 'Aguarita Demo';
   font-weight: 400;
   font-style: normal;
@@ -36,7 +36,8 @@
 }
 
 *{ 
-  box-sizing: border-box
+  box-sizing: border-box;
+  transition: 0.5s;
 }
 
 html{
@@ -364,6 +365,7 @@ h1 span, h2 span{
   background: color-mix(in srgb, var(--gold), transparent 50%)
 }
 
+
 .text-link{
   color: var(--cream);
   font-size: 0.6875rem;
@@ -390,7 +392,7 @@ h1 span, h2 span{
 
 .about-grid{
   display: grid;
-  grid-template-columns: 5fr 7fr;
+  grid-template-columns: 4fr 8fr;
   gap: clamp(2.5rem, 6vw, 4rem);
   align-items: start
 }
@@ -447,7 +449,7 @@ h2{
 .lawyers-grid{
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem
+  gap: 1.25rem
 }
 
 .lawyer-card{
@@ -472,7 +474,7 @@ h2{
   height: 100%;
   object-fit: cover;
   transform-origin: center center;
-  filter: grayscale(1) contrast(1.1);
+  filter: grayscale(1);
   transition: transform 0.7s ease, filter 0.7s ease
 }
 
@@ -481,14 +483,21 @@ h2{
   filter: grayscale(0)
 }
 
-.lawyer-card > div:not(.lawyer-card-media){
+.lawyer-card-info{
   position: absolute;
   inset: auto 0 0 0;
-  padding: 1.5rem;
-  background: linear-gradient(to top, var(--olive), color-mix(in srgb, var(--olive), transparent 20%), transparent)
+  padding: 2.1rem 1.15rem 0.55rem;
+  background: linear-gradient(
+    to top,
+    var(--olive) 0%,
+    var(--olive) 65%,
+    color-mix(in srgb, var(--olive) 90%, transparent) 73%,
+    color-mix(in srgb, var(--olive) 45%, transparent) 90%,
+    transparent 100%
+  )
 }
 
-.lawyer-card p{
+.lawyer-card-info p{
   margin: 0 0 0.25rem;
   color: var(--gold);
   font-size: 0.625rem;
@@ -496,7 +505,8 @@ h2{
   letter-spacing: 0.4em
 }
 
-.lawyer-card h3{
+.lawyer-card-info h3{
+  margin: 0;
   color: var(--cream);
   font-size: 1.5rem;
   line-height: 1.1
@@ -616,7 +626,9 @@ h2{
 
 .carousel-viewport{
   overflow: hidden;
-  margin-left: -1rem
+  margin-left: -1rem;
+  touch-action: pan-y;
+  cursor: grab
 }
 
 .carousel-track{
@@ -837,6 +849,95 @@ h2{
   letter-spacing: 0.4em
 }
 
+.whatsapp-float-slot{
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: visible;
+  pointer-events: none
+}
+
+.whatsapp-float{
+  --whatsapp-dock-right: 5rem;
+  --whatsapp-dock-bottom: 3rem;
+  --whatsapp-size: 3.75rem;
+  position: fixed;
+  right: var(--whatsapp-dock-right);
+  bottom: var(--whatsapp-dock-bottom);
+  z-index: 50;
+  display: inline-grid;
+  place-items: center;
+  width: var(--whatsapp-size);
+  height: var(--whatsapp-size);
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--olive);
+  border: 2px solid var(--cream);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+  pointer-events: auto;
+  transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+  animation: whatsapp-border-pulse 1.8s ease-in-out infinite
+}
+
+.whatsapp-float.is-fixed{
+  position: fixed;
+  right: var(--whatsapp-dock-right);
+  bottom: var(--whatsapp-dock-bottom);
+  left: auto;
+  top: auto
+}
+
+.whatsapp-float::before,
+.whatsapp-float::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  pointer-events: none;
+  animation: whatsapp-ring 2s ease-out infinite
+}
+
+.whatsapp-float::after{
+  animation-delay: 1s
+}
+
+.whatsapp-float svg{
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+  z-index: 1
+}
+
+.whatsapp-float:hover{
+  background: var(--cream);
+  color: var(--olive);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.32)
+}
+
+@keyframes whatsapp-border-pulse{
+  0%, 100%{
+    border-color: color-mix(in srgb, var(--cream), transparent 55%);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28), 0 0 0 0 color-mix(in srgb, var(--gold), transparent 70%)
+  }
+  50%{
+    border-color: var(--cream);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28), 0 0 0 8px color-mix(in srgb, var(--gold), transparent 85%)
+  }
+}
+
+@keyframes whatsapp-ring{
+  0%{
+    transform: scale(1);
+    opacity: 0.7
+  }
+  100%{
+    transform: scale(1.75);
+    opacity: 0
+  }
+}
+
 .reveal{
   opacity: 0;
   transform: translateY(24px);
@@ -874,6 +975,33 @@ h2{
 
   .carousel-slide{
     flex-basis: 50%
+  }
+
+  .lawyer-card-media img,
+  .lawyer-card:hover .lawyer-card-media img{
+    filter: none;
+    transform: none
+  }
+
+  .map-panel iframe{
+    filter: none
+  }
+
+  .footer-grid{
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center
+  }
+
+  .footer-grid > div:first-child p{
+    margin-left: auto;
+    margin-right: auto
+  }
+
+  .footer-lawyers{
+    grid-column: auto;
+    justify-items: center;
+    text-align: center
   }
 }
 
@@ -933,12 +1061,6 @@ h2{
     transform: none
   }
 
-  .lawyer-card-media img,
-  .lawyer-card:hover .lawyer-card-media img{
-    filter: none;
-    transform: none
-  }
-
   .split-heading{
     margin-bottom: 3rem
   }
@@ -960,24 +1082,87 @@ h2{
     flex-basis: 100%
   }
 
-  .footer-grid{
-    justify-items: center;
-    text-align: center
-  }
-
-  .footer-grid > div:first-child p{
-    margin-left: auto;
-    margin-right: auto
-  }
-
-  .footer-lawyers{
-    grid-column: auto;
-    justify-items: center;
-    text-align: center
-  }
-
   .copyright{
     letter-spacing: 0.25em;
-    line-height: 1.8
+    line-height: 1.8;
+    height: 3.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .whatsapp-float{
+    --whatsapp-dock-right: 1.58rem;
+    --whatsapp-dock-bottom: 4.3rem;
+    --whatsapp-size: 3.25rem
+  }
+
+  .whatsapp-float.is-fixed{
+    right: var(--whatsapp-dock-right);
+    bottom: var(--whatsapp-dock-bottom);
+    left: auto;
+    top: auto;
+    width: var(--whatsapp-size);
+    height: var(--whatsapp-size)
+  }
+
+  .hero-links{
+    --whatsapp-size: 3.25rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.4fr) var(--whatsapp-size);
+    align-items: center;
+    width: 100%;
+    column-gap: 1rem;
+    row-gap: 0.4rem
+  }
+
+  .hero-links .primary-link{
+    grid-column: 1;
+    min-width: 0;
+    justify-self: stretch;
+    width: max-content;
+    max-width: 100%;
+    padding: clamp(0.85rem, 3.2vw, 1.25rem) clamp(0.75rem, 3.5vw, 2rem);
+    gap: clamp(0.35rem, 1.5vw, 0.75rem);
+    font-size: clamp(0.5625rem, 2.4vw, 0.6875rem);
+    letter-spacing: clamp(0.08em, 0.6vw, 0.25em);
+    transition: background 0.25s ease
+  }
+
+  .hero-links .line{
+    grid-column: 2;
+    width: 2rem;
+    justify-self: center;
+    transition: none
+  }
+
+  .whatsapp-float-slot{
+    --whatsapp-size: 3.25rem;
+    grid-column: 3;
+    position: relative;
+    display: block;
+    width: var(--whatsapp-size);
+    height: var(--whatsapp-size);
+    justify-self: end;
+    overflow: visible;
+    pointer-events: auto;
+    transition: none
+  }
+
+  .whatsapp-float:not(.is-fixed){
+    position: absolute;
+    inset: 0;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    height: 100%;
+    transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease
+  }
+
+  .hero-links .text-link{
+    grid-column: 1 / -1
+  }
+
+  .whatsapp-float svg{
+    width: 1.35rem;
+    height: 1.35rem
   }
 }
