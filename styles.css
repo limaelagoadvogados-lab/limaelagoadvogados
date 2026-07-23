@@ -983,10 +983,6 @@ h2{
     transform: none
   }
 
-  .map-panel iframe{
-    filter: none
-  }
-
   .footer-grid{
     grid-template-columns: 1fr;
     justify-items: center;
